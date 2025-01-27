@@ -4,22 +4,42 @@
     box-sizing: border-box;
 }
 
+/* ! :ROOT Sammelbox für meine Variablen. kann ich überall wiederverwenden. globale aenderungen easy möglich*/
+:root {
+    --margin_buttom: 100px;
+    --primary-color: #34618a;
+    --font-size: 10px;
+    --dieheißenwieichwill: 40px;
+    --header: 30px;
+    --paragraph: 20px;
+}
+
+/* ! Gibt den Sprungmarken ein Verhalten */
+html {
+    scroll-behavior: smooth;
+}
+
 header{
-    margin-bottom: 50px;
+    margin-bottom: var(--margin_buttom);
+    color: var(--primary-color)
+
 }
 
 h1 {
-    margin-bottom: 50px;
+    margin-bottom: var(--margin_buttom);
+    font-size: var(--header);
 }
 
 header p {
-    margin-bottom: 50px;
+    margin-bottom: var(--margin_buttom);
+    color: var(--primary-color);
+    font-size: var(--paragraph);
 }
 
 /* ! Initial groß schreiben */
 header p::first-letter {
-    color: teal;
-    font-size: 20px;
+    color: rgb(127, 58, 177);
+    font-size: 50px;
 }
 
 /* ! Aufzählunszeichen anpassen */
@@ -27,14 +47,17 @@ header ul li::marker {
     /* list-style: none; */
     font-family: "Font Awesome 6 Free";
     content: "\f256";
+    font-size: 30px;
     color: teal;
+    padding-left: 20px;
 }
 
 h2{
     /* text-align: center; */
-    margin-bottom: 50px;
+    margin-bottom: var(--margin_buttom);
 }
 
+/* ! fügt vorher was ein */
 h2::before {
     font-family: "Font Awesome 6 Free";
     content: "\f256";
@@ -43,6 +66,7 @@ h2::before {
     margin-right: 10px;
 }
 
+/* ! fügt danach was ein */
 h2::after{
     font-family: "Font Awesome 6 Free";
     color: blueviolet;
@@ -51,14 +75,15 @@ h2::after{
 }
 
 section{
-    margin-bottom: 50px;
+    margin-bottom: var(--margin_buttom);
 }
 
 section:first-of-type {
     text-align: center;
-    margin-bottom: 50px;
+    margin-bottom: var(--margin_buttom);
 }
 
+/* ! Mauszeiger überm Button ändern */
 section:first-of-type p {
     color: darkslateblue;
     border: 1px solid green;
@@ -102,10 +127,10 @@ section:nth-of-type(2){
 }
 
 article{
-    margin-bottom: 50px;
+    margin-bottom: var(--margin_buttom);
 }
 
-/* ! CLASS/ID */
+/* ! CLASSES*/
 .bg-angebot {
     background-color: rgb(62, 176, 121);
     Padding: 2%;
@@ -123,3 +148,18 @@ article{
 .btn-border {
     border: 4px solid rebeccapurple;
 }
+
+/* ! IDs */
+#zum-footer {
+    margin-bottom: 100px;
+    background-color: aquamarine;
+    padding: 10vh 0;
+}
+
+/* #Never use important. it kills unicorns. trumpft ids classes elements */
+/* footer{
+    background-color: teal !important;
+} */
+ /* # IDs dürfen nur einmal pro html vorkommen. unique */
+
+/* ! root ganz oben einfügen */
