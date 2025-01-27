@@ -1,0 +1,71 @@
+* {
+    /* padding: 0; */
+    margin: 0;
+    box-sizing: border-box;
+}
+
+header{
+    margin-bottom: 50px;
+}
+h1 {
+    margin-bottom: 50px;
+}
+
+header p {
+    margin-bottom: 50px;
+}
+
+header p::first-letter {
+    color: teal;
+    font-size: 30px;
+}
+
+header ul li::marker {
+    /* list-style: none; */
+    font-family: "Font Awesome 6 Free";
+    content: "\f256";
+    color: teal;
+}
+
+h2{
+    /* text-align: center; */
+    margin-bottom: 50px;
+}
+
+h2::before {
+    font-family: "Font Awesome 6 Free";
+    content: "\f256";
+    color: teal;
+    font-size: 50px;
+    margin-right: 10px;
+}
+
+h2::after{
+    font-family: "Font Awesome 6 Free";
+    color: blueviolet;
+    content: "\f72b Kein Witz";
+    font-size: 50px;
+    
+}
+
+section:first-of-type {
+    text-align:center;
+}
+
+section:first-of-type p {
+    color: darkslateblue;
+    border: 1px solid green;
+    width: 300px;
+    margin: 0 auto;
+    padding: 1%;
+    border-radius: 10px;
+    cursor: pointer;
+    /* #MERKE cursor verhalten ins hauptelement. falls der hover nicht geht, geht der mausanzeiger trotzdem */
+}
+
+section:first-of-type p:hover {
+    color: teal;
+    background-color: aquamarine;
+    border: 3px dotted red;
+
+}
