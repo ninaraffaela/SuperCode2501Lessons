@@ -69,3 +69,22 @@ section:first-of-type p:hover {
     border: 3px dotted red;
 
 }
+
+/* ! BG Images */
+section:nth-of-type(2){
+    background-color: bisque;
+    height: 300px;
+    /* background-image: url("../img/sunset.jpg");
+    background-size: contain;
+    background-size: 20% 30%;
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    background-position: 25% 75%; */
+    
+/*!  Zwei Bilder */
+    background-image: url(../img/sunset.jpg), url(../img/macbookDarkBack.webp);
+    background-size: 40% 50%, 40% 50%;
+    background-repeat: no-repeat;
+    background-position: top left, bottom right;
+
+}
