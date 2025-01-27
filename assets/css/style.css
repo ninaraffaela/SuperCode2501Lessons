@@ -7,6 +7,7 @@
 header{
     margin-bottom: 50px;
 }
+
 h1 {
     margin-bottom: 50px;
 }
@@ -15,11 +16,13 @@ header p {
     margin-bottom: 50px;
 }
 
+/* ! Initial groß schreiben */
 header p::first-letter {
     color: teal;
-    font-size: 30px;
+    font-size: 20px;
 }
 
+/* ! Aufzählunszeichen anpassen */
 header ul li::marker {
     /* list-style: none; */
     font-family: "Font Awesome 6 Free";
@@ -45,11 +48,15 @@ h2::after{
     color: blueviolet;
     content: "\f72b Kein Witz";
     font-size: 50px;
-    
+}
+
+section{
+    margin-bottom: 50px;
 }
 
 section:first-of-type {
-    text-align:center;
+    text-align: center;
+    margin-bottom: 50px;
 }
 
 section:first-of-type p {
@@ -63,6 +70,7 @@ section:first-of-type p {
     /* #MERKE cursor verhalten ins hauptelement. falls der hover nicht geht, geht der mausanzeiger trotzdem */
 }
 
+/* ! Hover */
 section:first-of-type p:hover {
     color: teal;
     background-color: aquamarine;
@@ -86,9 +94,28 @@ section:nth-of-type(2){
     background-size: 40% 50%, 40% 50%;
     background-repeat: no-repeat;
     background-position: top left, bottom right;
-    
+
     /* ! Farbverlauf */
     /* background: linear-gradient(217deg, rgba(255,0,0,.8), rgba(255,0,0,0) 70.71%),
                 linear-gradient(127deg, rgba(0,255,0,.8), rgba(0,255,0,0) 70.71%),
                 linear-gradient(336deg, rgba(0,0,255,.8), rgba(0,0,255,0) 70.71%); */
+}
+
+article{
+    margin-bottom: 50px;
+}
+
+/* ! CLASS/ID */
+.bg-angebot {
+    background-color: rgb(62, 176, 121);
+    Padding: 2%;
+    border-radius: 15px;
+    font-size: 20px;
+}
+
+.bg-krassesAngebot {
+    background-color: red;
+    padding: 2%;
+    border-radius: 15px;
+    font-size: 30px;
 }
